@@ -22,11 +22,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Drawing" id="aBg-Lz-yab">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="undo" id="8aN-sV-1Ai">
-                            <connections>
-                                <action selector="actionUndo:" destination="BYZ-38-t0r" id="l1V-MY-Xk7"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem enabled="NO" systemItem="undo" id="8aN-sV-1Ai">
+                                <connections>
+                                    <action selector="actionUndo:" destination="BYZ-38-t0r" id="l1V-MY-Xk7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="compose" id="xz5-AW-XGa">
+                                <connections>
+                                    <action selector="actionColorPicker:" destination="BYZ-38-t0r" id="zgI-GD-O6S"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem enabled="NO" title="Save" id="dXq-ao-T5B">
                                 <connections>
@@ -43,6 +50,7 @@
                     <connections>
                         <outlet property="btnReset" destination="ag0-Az-FUh" id="8g2-6k-ncJ"/>
                         <outlet property="btnSave" destination="dXq-ao-T5B" id="iPA-Ba-ow2"/>
+                        <outlet property="colorPicker" destination="xz5-AW-XGa" id="8SE-DK-nx1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

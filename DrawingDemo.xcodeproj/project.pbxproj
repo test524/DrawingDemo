@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE30BB9D203E6BE500718189 /* ColorPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE30BB9C203E6BE500718189 /* ColorPickerTableViewController.swift */; };
 		AE31769E2001F66B00801377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31769D2001F66B00801377 /* AppDelegate.swift */; };
 		AE3176A02001F66B00801377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31769F2001F66B00801377 /* ViewController.swift */; };
 		AE3176A32001F66C00801377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3176A12001F66B00801377 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE30BB9C203E6BE500718189 /* ColorPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerTableViewController.swift; sourceTree = "<group>"; };
 		AE31769A2001F66B00801377 /* DrawingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE31769D2001F66B00801377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE31769F2001F66B00801377 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				AE31769D2001F66B00801377 /* AppDelegate.swift */,
 				AE31769F2001F66B00801377 /* ViewController.swift */,
 				AE3176AF2001F77000801377 /* DrawingView.swift */,
+				AE30BB9C203E6BE500718189 /* ColorPickerTableViewController.swift */,
 				AE3176A12001F66B00801377 /* Main.storyboard */,
 				AE3176A42001F66C00801377 /* Assets.xcassets */,
 				AE3176A62001F66C00801377 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 				AE3176B02001F77000801377 /* DrawingView.swift in Sources */,
 				AE3176A02001F66B00801377 /* ViewController.swift in Sources */,
 				AE31769E2001F66B00801377 /* AppDelegate.swift in Sources */,
+				AE30BB9D203E6BE500718189 /* ColorPickerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

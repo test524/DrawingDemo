@@ -9,7 +9,8 @@ import UIKit
 
 class DrawingView: UIView
 {
-    var lineColor:UIColor!
+   
+    var lineColor:UIColor = UIColor.orange
     var lineWidth:CGFloat!
     var path:UIBezierPath!
     var touchPoint:CGPoint!
@@ -23,7 +24,6 @@ class DrawingView: UIView
     {
         self.clipsToBounds = true
         self.isMultipleTouchEnabled = false
-        lineColor = UIColor.orange
         lineWidth = 10
     }
     
@@ -37,6 +37,7 @@ class DrawingView: UIView
         fatalError("init(coder:) has not been implemented")
     }
     
+
     //MARK:- Touch events 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {

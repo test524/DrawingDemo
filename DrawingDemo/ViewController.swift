@@ -2,11 +2,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController  , UIPopoverPresentationControllerDelegate , ColorPickerTableViewControllerDelegate {
+    
+    
+    @IBOutlet var colorPicker: UIBarButtonItem!
+    
     @IBOutlet var btnSave: UIBarButtonItem!
     @IBOutlet var btnReset: UIBarButtonItem!
-    
+    //var popover:UIPopoverPresentationController!
+    var vc:ColorPickerTableViewController!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -44,6 +48,38 @@ class ViewController: UIViewController {
     @IBAction func actionUndo(_ sender: UIBarButtonItem)
     {
         canvas.undo()
+    }
+    
+    func selectedColor(color: UIColor)
+    {
+        canvas.lineColor = color
+        vc.dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK:- Color picker
+    @IBAction func actionColorPicker(_ sender: UIBarButtonItem)
+    {
+        vc = ColorPickerTableViewController()
+        vc.delegate = self
+        vc.modalPresentationStyle = .popover
+        
+        //Optional
+        vc.preferredContentSize = CGSize.init(width: 140, height: 170)
+        
+        let popover = vc.popoverPresentationController!
+        popover.barButtonItem = sender
+        popover.delegate = self
+        present(vc, animated: true, completion:nil)
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle
+    {
+        return UIModalPresentationStyle.none
+    }
+    
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool
+    {
+        return true
     }
     
     //MARK:- DrawingView
